@@ -1,3 +1,4 @@
 {
-  "build": { "dockerfile": "Dockerfile" }
+  "build": { "dockerfile": "Dockerfile" },
+  "postCreateCommand": "tlmgr path add && git submodule update --init --recursive && sh config/precompile/build.sh"
 }
