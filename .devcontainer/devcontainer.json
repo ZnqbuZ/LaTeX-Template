@@ -4,5 +4,6 @@
     "ghcr.io/prulloac/devcontainer-features/latex:1": {
       "scheme": "full"
     }
-  }
+  },
+  "postCreateCommand": "tlmgr path add && git submodule update --init --recursive && sh config/precompile/build.sh"
 }
