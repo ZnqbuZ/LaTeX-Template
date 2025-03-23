@@ -1,5 +1,8 @@
 {
     "build": { "dockerfile": "Dockerfile" },
+    "features": {
+      "ghcr.io/devcontainers/features/github-cli": {}
+    },
     "postCreateCommand": "tlmgr path add && git submodule update --init --recursive && sh config/precompile/build.sh",
     "customizations": {
         "vscode": {
