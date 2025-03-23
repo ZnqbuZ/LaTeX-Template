@@ -1,13 +1,17 @@
 {
     "build": { "dockerfile": "Dockerfile" },
     "features": {
-      "ghcr.io/devcontainers/features/github-cli": {}
+      "ghcr.io/devcontainers/features/sshd:1": {},
+      "ghcr.io/devcontainers/features/github-cli": {},
+      "ghcr.io/devcontainers-extra/features/fish-apt-get:1": {}
     },
-    "postCreateCommand": "tlmgr path add && git submodule update --init --recursive && sh config/precompile/build.sh",
+    "postCreateCommand": "./.devcontainer/setup.sh",
     "customizations": {
         "vscode": {
             "extensions": [
-                "James-Yu.latex-workshop"
+                "James-Yu.latex-workshop",
+                "GitHub.copilot",
+                "IBM.output-colorizer"
             ]
         }
     }
