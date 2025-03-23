@@ -1,9 +1,7 @@
 {
-    "build": { "dockerfile": "Dockerfile" },
+    "image": "docker.io/znqbuz/tex-live:latest",
     "features": {
-      "ghcr.io/devcontainers/features/sshd:1": {},
-      "ghcr.io/devcontainers/features/github-cli": {},
-      "ghcr.io/devcontainers-extra/features/fish-apt-get:1": {}
+      "ghcr.io/devcontainers/features/github-cli": {}
     },
     "postCreateCommand": "./.devcontainer/setup.sh",
     "customizations": {
